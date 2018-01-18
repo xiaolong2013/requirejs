@@ -26,13 +26,24 @@ require.config({
                } 
             }
         }
+    },
+    map:{
+       
+       'app/d' : {
+          jquery : 'jquery-2.2.4'
+       },
+
+       'app/e' : {
+          jquery : 'jquery-3.2.1'
+       }
+
     }
 })
 
 
 //以下的 jquery canvas 都不需要加路径 可以默认baseUrl 中加载
 //sub 默认从
-require(['jquery', 'canvas', 'app/sub','app/c'], function($, canvas, sub,c){
+require(['jquery', 'canvas', 'app/sub','app/c','app/d', 'app/e'], function($, canvas, sub,c,d,e){
      
     //加载进来 jquery 
     /*
@@ -40,8 +51,8 @@ require(['jquery', 'canvas', 'app/sub','app/c'], function($, canvas, sub,c){
           alert("domReady");
        })
     */
-    console.log("c==="+ c.aa());
-    console.log("c==="+ c.bb());
+    console.log("c==="+ c.aa);
+    console.log("c==="+ c.bb);
     console.log(sub);
     console.log("$====="+$);
     console.log("color=="+canvas.color);
