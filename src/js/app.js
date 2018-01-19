@@ -44,13 +44,15 @@ require.config({
 //以下的 jquery canvas 都不需要加路径 可以默认baseUrl 中加载
 //sub 默认从
 require(['jquery', 'canvas', 'app/sub','app/c','app/d', 'app/e'], function($, canvas, sub,c,d,e){
-     
+    
     //加载进来 jquery 
+    
     /*
        $(function(){
           alert("domReady");
        })
     */
+    
     console.log("c==="+ c.aa);
     console.log("c==="+ c.bb);
     console.log(sub);
